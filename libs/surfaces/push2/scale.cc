@@ -52,13 +52,13 @@ row_interval_string (const Push2::RowInterval row_interval, const bool inkey)
 {
 	switch (row_interval) {
 	case Push2::Third:
-		return _(u8"3rd \u2191");
+		return _("3rd \xe2\x86\x91");
 	case Push2::Fourth:
-		return _(u8"4th \u2191");
+		return _("4th \xe2\x86\x91");
 	case Push2::Fifth:
-		return _(u8"5th \u2191");
+		return _("5th \xe2\x86\x91");
 	case Push2::Sequential:
-		return inkey ? _(u8"Octave \u2191") : _(u8"Sequential \u2191");
+		return inkey ? _("Octave \xe2\x86\x91") : _("Sequential \xe2\x86\x91");
 	}
 
 	return "";
@@ -67,7 +67,7 @@ row_interval_string (const Push2::RowInterval row_interval, const bool inkey)
 static const char*
 column_interval_string (const bool inkey)
 {
-	return inkey ? _(u8"Scale \u2192") : _(u8"Semitone \u2192");
+	return inkey ? _("Scale \xe2\x86\x92") : _("Semitone \xe2\x86\x92");
 }
 
 ScaleLayout::ScaleLayout (Push2& p, Session & s, std::string const & name)
@@ -184,19 +184,19 @@ ScaleLayout::ScaleLayout (Push2& p, Session & s, std::string const & name)
 			t->set (S_("Note|F"));
 			break;
 		case 2:
-			t->set (S_(u8"Note|B\u266D/A\u266F"));
+			t->set (S_("Note|B\xe2\x99\xad/A\xe2\x99\xaf"));
 			break;
 		case 3:
-			t->set (S_(u8"Note|E\u266D/D\u266F"));
+			t->set (S_("Note|E\xe2\x99\xad/D\xe2\x99\xaf"));
 			break;
 		case 4:
-			t->set (S_(u8"Note|A\u266D/G\u266F"));
+			t->set (S_("Note|A\xe2\x99\xad/G\xe2\x99\xaf"));
 			break;
 		case 5:
-			t->set (S_(u8"Note|D\u266D/C\u266F"));
+			t->set (S_("Note|D\xe2\x99\xad/C\xe2\x99\xaf"));
 			break;
 		case 6:
-			t->set (S_(u8"Note|G\u266D/F\u266F"));
+			t->set (S_("Note|G\xe2\x99\xad/F\xe2\x99\xaf"));
 			break;
 		}
 
